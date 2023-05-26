@@ -1,0 +1,23 @@
+﻿<Window x:Class="MemoryTiles.PlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Play Window" Height="500" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <Image Name="UserProfileImage" Width="50" Height="50"/>
+            <TextBlock Name="UserName" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Name="Level" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock Name="Timer" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock Name="Hearts" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <Button Name="SaveGame" Content="Save Game" Margin="10,0,0,0" VerticalAlignment="Center"  Click="SaveGame_Click"/>
+            <Button Name="AutoWinButton" Content="Auto Win" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" Opacity="0.5" Click="AutoWinButton_Click"/>
+        </StackPanel>
+        <UniformGrid Name="TileGrid" Grid.Row="1" Rows="4" Columns="4" Margin="5">
+            <!-- Buttons will spawn here -->
+        </UniformGrid>
+    </Grid>
+</Window>
